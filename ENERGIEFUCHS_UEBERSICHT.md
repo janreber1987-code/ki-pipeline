@@ -124,6 +124,20 @@ Die Notion-Seite „Projekt-Kontext“ führt eine Tabelle „MuKEn 2014 — all
 
 **[P]:** Nach meinem Kenntnisstand kennt MuKEn 2014 (Modul Heizungsersatz, Art. 1.29 ff.) 11 Standardlösungen. Eine davon ist „WW-Wärmepumpe + PV“. Nummerierung und Umfang variieren je nach kantonaler Umsetzung. `muken.py` übernimmt die 9er-Tabelle. Das muss man gegen den **BE-Erlasstext** (KEnG / KEnV in der geltenden Fassung) prüfen, inklusive der Frage, ob und seit wann die Pflicht „GEAK D oder Standardlösung“ in BE überhaupt in Kraft ist. Die Revision 2019 ist in der Volksabstimmung gescheitert. Laut Code gilt SO als „ausstehend“ (Abstimmung Feb. 2026); dieser Stand muss aktualisiert werden.
 
+### 4a. Architekturvorgabe für die Rechtsengine
+
+„GEAK nötig?“ sind mindestens drei verschiedene Fragen. Die Engine darf sie nie zusammenlegen:
+
+| Regeltyp | Beispiel |
+|---|---|
+| `foerdervoraussetzung` | GEAK als Bedingung für die Auszahlung eines WP-Förderbeitrags |
+| `ersatzvorschrift` | GEAK D oder Standardlösung beim Ersatz einer fossilen Heizung (Energiegesetz) |
+| `gebaeudeanalyse_foerderung` | GEAK / GEAK Plus als selbst geförderte Massnahme |
+
+Jede Regel braucht die Felder `kanton`, `regeltyp`, `gueltig_ab`, `gueltig_bis`, `status` (in_kraft / entwurf / abgelehnt), `quelle_url`, `quelle_version` und `geprueft_am`. Ohne Primärquelle ist der Status `unverifiziert`, und das Dossier sagt dann „bitte bei der Fachstelle bestätigen“ statt Ja oder Nein.
+
+**Belegfall (26.09.2026):** Eine Review-KI hat für SO M-05 den Satz „Ohne gültigen GEAK kann der Förderbeitrag nicht ausbezahlt werden“ behauptet. Die Belege dafür waren KI-Zusammenfassungen von Suchergebnissen. Die Treffer zur Suche nach dem genauen Satz stammten von der **Energieförderung des Kantons Bern**. Der Satz ist also für BE belegt, für SO bisher nicht. Für SO ist nur die separate GEAK-Plus-Förderung nach SO-21 belegt: EFH 50 %, höchstens CHF 1'100; MFH höchstens CHF 1'800. Status von SO M-05 → GEAK-Pflicht: **unverifiziert, bis das aktuelle Merkblatt M-05 als Primärquelle vorliegt.**
+
 ---
 
 ## 5. Kernthese und Gegenargument
