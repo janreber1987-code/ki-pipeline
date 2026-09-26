@@ -126,15 +126,20 @@ Die Notion-Seite „Projekt-Kontext“ führt eine Tabelle „MuKEn 2014 — all
 
 ### 4a. Architekturvorgabe für die Rechtsengine
 
-„GEAK nötig?“ sind mindestens drei verschiedene Fragen. Die Engine darf sie nie zusammenlegen:
+Eine Regel ist nicht „wahr“, sondern eine **versionierte Behauptung mit Geltungsbereich und Evidenz**. „GEAK nötig?“ umfasst mindestens vier verschiedene Fragen, und die Engine darf sie nie zusammenlegen:
 
 | Regeltyp | Beispiel |
 |---|---|
-| `foerdervoraussetzung` | GEAK als Bedingung für die Auszahlung eines WP-Förderbeitrags |
+| `foerdervoraussetzung_administrativ` | GEAK als Bedingung für die Auszahlung, Gesuch vor Baubeginn |
+| `foerdervoraussetzung_technisch` | WPSM, Gütesiegel, Leistungsgrenzen, W/m² EBF |
 | `ersatzvorschrift` | GEAK D oder Standardlösung beim Ersatz einer fossilen Heizung (Energiegesetz) |
 | `gebaeudeanalyse_foerderung` | GEAK / GEAK Plus als selbst geförderte Massnahme |
 
-Jede Regel braucht die Felder `kanton`, `regeltyp`, `gueltig_ab`, `gueltig_bis`, `status` (in_kraft / entwurf / abgelehnt), `quelle_url`, `quelle_version` und `geprueft_am`. Ohne Primärquelle ist der Status `unverifiziert`, und das Dossier sagt dann „bitte bei der Fachstelle bestätigen“ statt Ja oder Nein.
+**Felder pro Behauptung:** `kanton`, `massnahme` (z. B. M-05), `regeltyp`, `aussage`, `gueltig_ab`, `gueltig_bis`, `rechtsstatus` (in_kraft / entwurf / abgelehnt), `evidenzstatus` (unverifiziert / sekundär / primär / schriftlich_bestätigt), `quelle_url`, `quelle_version`, `zitat_wörtlich`, `geprueft_am`, `geprueft_von`, `entscheidungsrelevanz`.
+
+**Harte Ausgaberegel:** Das Dossier formuliert eine Aussage nur dann als Tatsache, wenn der Evidenzstatus `primär` oder `schriftlich_bestätigt` ist **und** Kanton, Massnahme und Datum des Gebäudefalls im Geltungsbereich liegen. Sonst lautet die Ausgabe: „nicht verifiziert, vor Auftragserteilung bei der Fachstelle bestätigen“, zusammen mit der Entscheidungsrelevanz. Sekundärquellen wie Installateur-Websites oder KI-Zusammenfassungen reichen nie für eine Hochstufung.
+
+**Fact-Gate:** Primärquelle → Extraktion mit wörtlichem Zitat → Behauptung → Geltungsbereich → Review → Freigabe → Änderungsüberwachung (Hash der Quelle; ändert sie sich, wird die Regel automatisch auf `unverifiziert` zurückgestuft). Für den Start reicht das manuell für BE und SO.
 
 **Belegfall (26.09.2026):** Eine Review-KI hat für SO M-05 den Satz „Ohne gültigen GEAK kann der Förderbeitrag nicht ausbezahlt werden“ behauptet. Die Belege dafür waren KI-Zusammenfassungen von Suchergebnissen. Die Treffer zur Suche nach dem genauen Satz stammten von der **Energieförderung des Kantons Bern**. Der Satz ist also für BE belegt, für SO bisher nicht. Für SO ist nur die separate GEAK-Plus-Förderung nach SO-21 belegt: EFH 50 %, höchstens CHF 1'100; MFH höchstens CHF 1'800. Status von SO M-05 → GEAK-Pflicht: **unverifiziert, bis das aktuelle Merkblatt M-05 als Primärquelle vorliegt.**
 
