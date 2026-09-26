@@ -141,7 +141,19 @@ Eine Regel ist nicht „wahr“, sondern eine **versionierte Behauptung mit Gelt
 
 **Fact-Gate:** Primärquelle → Extraktion mit wörtlichem Zitat → Behauptung → Geltungsbereich → Review → Freigabe → Änderungsüberwachung (Hash der Quelle; ändert sie sich, wird die Regel automatisch auf `unverifiziert` zurückgestuft). Für den Start reicht das manuell für BE und SO.
 
-**Belegfall (26.09.2026):** Eine Review-KI hat für SO M-05 den Satz „Ohne gültigen GEAK kann der Förderbeitrag nicht ausbezahlt werden“ behauptet. Die Belege dafür waren KI-Zusammenfassungen von Suchergebnissen. Die Treffer zur Suche nach dem genauen Satz stammten von der **Energieförderung des Kantons Bern**. Der Satz ist also für BE belegt, für SO bisher nicht. Für SO ist nur die separate GEAK-Plus-Förderung nach SO-21 belegt: EFH 50 %, höchstens CHF 1'100; MFH höchstens CHF 1'800. Status von SO M-05 → GEAK-Pflicht: **unverifiziert, bis das aktuelle Merkblatt M-05 als Primärquelle vorliegt.**
+**Belegfall (26.09.2026):** Eine Review-KI hat für SO M-05 den Satz „Ohne gültigen GEAK kann der Förderbeitrag nicht ausbezahlt werden“ behauptet. Die Belege dafür waren KI-Zusammenfassungen von Suchergebnissen. Die Treffer zur Suche nach dem genauen Satz stammten von der **Energieförderung des Kantons Bern**. Der Satz ist also für BE belegt, für SO bisher nicht. Für SO ist nur die separate GEAK-Plus-Förderung nach SO-21 belegt: EFH 50 %, höchstens CHF 1'100; MFH höchstens CHF 1'800. **Nachtrag, gleicher Tag, Jans Prüfung der Primärquellen der Energiefachstelle SO:**
+
+| Behauptung (SO, M-05) | Aussage | Evidenzstatus | Quelle |
+|---|---|---|---|
+| WPSM-Anlagezertifikat ≤ 15 kWth | JA | primär | Förderbedingungen Wärmepumpen V250101, FAQ |
+| Leistungsgarantie > 15 kWth | JA | primär | Förderbedingungen Wärmepumpen V250101 |
+| Gesuch vollständig vor Baubeginn | JA | primär | FAQ |
+| GEAK als Auszahlungsbedingung | NEIN | **primär, Negativbefund** | in den WP-Förderbedingungen V250101 und M-05 ab 01.01.2024 nicht genannt |
+| Grundbeitrag CHF 3'550 | – | sekundär | noch offen |
+
+`quelle_version=250101`, `geprueft_am=2026-09-26`.
+
+**Neuer Evidenzstatus `primär_negativ`:** Wenn eine Bedingung in der Quelle *fehlt*, belegt das nur etwas, sofern die ganze Quellenkette geprüft ist: die massnahmenspezifischen Bedingungen, die dort verwiesenen allgemeinen Förderbedingungen und das Reglement bzw. die Verordnung. Sonst gilt die Aussage nur als „in Dokument X nicht verlangt“.
 
 ---
 
