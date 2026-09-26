@@ -20,9 +20,19 @@ def fehler(regel):
     if regel["evidenzstatus"] not in EVIDENZ:
         f.append(f"unbekannter evidenzstatus {regel['evidenzstatus']}")
     if regel["evidenzstatus"] in ("primär", "primär_negativ", "schriftlich_bestätigt"):
-        f += [f"{k} fehlt" for k in PFLICHT_FUER_PRIMAER if not regel.get(k)]
-    if regel["evidenzstatus"] == "primär_negativ" and regel.get("wert") == "NEIN":
-        f.append("primär_negativ darf nie NEIN sein")
+        pflicht = PFLICHT_FUER_PRIMAER
+        if regel["evidenzstatus"] == "primär_negativ":  # Abwesenheit hat kein Zitat, dafür geprueft_umfang
+            pflicht = tuple(k for k in pflicht if k != "zitat_woertlich")
+        f += [f"{k} fehlt" for k in pflicht if not regel.get(k)]
+    if regel["evidenzstatus"] == "primär_negativ":
+        if regel.get("wert") == "NEIN":
+            f.append("primär_negativ darf nie NEIN sein")
+        umfang = regel.get("geprueft_umfang") or []
+        if not umfang:
+            f.append("geprueft_umfang fehlt")
+        offen = [d["dokument"] for d in umfang if not d.get("vollstaendig_geprueft")]
+        if offen:
+            f.append("nicht vollständig geprüft: " + ", ".join(offen))
     return f
 
 
@@ -31,7 +41,7 @@ def dossier_aussage(regel):
     if fehler(regel) or regel["evidenzstatus"] in ("unverifiziert", "sekundär"):
         return f"{regel['aussage']}: nicht verifiziert – vor Auftragserteilung bei der Fachstelle bestätigen."
     if regel["evidenzstatus"] == "primär_negativ":
-        return (f"{regel['aussage']}: in {', '.join(regel['geprueft_umfang'])} nicht als Voraussetzung "
+        return (f"{regel['aussage']}: in {', '.join(d['dokument'] for d in regel['geprueft_umfang'])} nicht als Voraussetzung "
                 f"aufgeführt (Stand {regel['geprueft_am']}).")
     return f"{regel['aussage']}: {regel['wert']} (Quelle {regel['quelle_version']}, Stand {regel['geprueft_am']})."
 
