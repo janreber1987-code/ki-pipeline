@@ -12,13 +12,14 @@
     "evidenzstatus": "primär",
     "quelle_titel": "Förderbedingungen Wärmepumpen M-05/IP-05/M-06/IP-06",
     "quelle_herausgeber": "Energiefachstelle, Amt für Wirtschaft und Arbeit, Kanton Solothurn",
-    "quelle_url": null,
+    "quelle_url": "https://energie.so.ch/fileadmin/energie/_pdf/Foerderbedingungen_Waermepumpen.pdf",
     "quelle_version": "260101",
     "zitat_woertlich": "M-05: bis 15 kWth 3550 Franken",
     "geprueft_am": "2026-09-27",
     "geprueft_von": "Jan",
     "entscheidungsrelevanz": "hoch",
-    "notiz": "V260101 ersetzt V250101 (die Frage nach der Gültigkeit 2026 ist damit erledigt). Die offizielle WP-Förderseite SO verlinkt dieses Dokument als massgeblich."
+    "notiz": "V260101 ersetzt V250101 (die Frage nach der Gültigkeit 2026 ist damit erledigt). Die offizielle WP-Förderseite SO verlinkt dieses Dokument als massgeblich.",
+    "url_hinweis": "Die URL enthält keine Versionsnummer, der Inhalt kann sich ändern. Deshalb auf quelle_version prüfen und die Quelle überwachen."
   },
   {
     "id": "SO-M05-WPSM",
@@ -33,23 +34,27 @@
     "evidenzstatus": "primär",
     "quelle_titel": "Förderbedingungen Wärmepumpen M-05/IP-05/M-06/IP-06; FAQ Wärmepumpen, Energiefachstelle Kanton Solothurn",
     "quelle_herausgeber": "Energiefachstelle Kanton Solothurn",
-    "quelle_url": null,
-    "quelle_version": "260101; FAQ Stand 2026-09-26",
+    "quelle_url": "https://energie.so.ch/fileadmin/energie/_pdf/Foerderbedingungen_Waermepumpen.pdf",
+    "quelle_version": "260101; FAQ Stand 2026-09-27",
     "zitat_woertlich": [
       {
         "quelle": "Förderbedingungen Wärmepumpen M-05/IP-05/M-06/IP-06 V260101",
-        "text": "Anlage bis 15 kWth: Anlagezertifikat WPSM"
+        "text": "Anlage bis 15kWth: Anlagezertifikat WPSM",
+        "url": "https://energie.so.ch/fileadmin/energie/_pdf/Foerderbedingungen_Waermepumpen.pdf",
+        "seite": 2
       },
       {
         "quelle": "FAQ Wärmepumpen, Energiefachstelle Kanton Solothurn",
         "frage": "Muss für Wärmepumpenanlagen < 15 kWth immer das Wärmepumpen-System Modul angewendet werden, auch wenn ein Gütesiegel vorhanden ist?",
-        "text": "Ja."
+        "text": "Ja.",
+        "url": "https://energie.so.ch/foerderung/foerdermassnahmen/waermepumpen/haeufige-fragen-und-antworten/"
       }
     ],
     "geprueft_am": "2026-09-27",
     "geprueft_von": "Jan",
     "entscheidungsrelevanz": "hoch",
-    "notiz": "Scheinwiderspruch geklärt: Die Aufzählung 'Gütesiegel, WPSM oder Leistungsgarantie' ist allgemein gehalten; für ≤ 15 kWth ist WPSM zwingend."
+    "notiz": "Scheinwiderspruch geklärt: Die Aufzählung 'Gütesiegel, WPSM oder Leistungsgarantie' ist allgemein gehalten; für ≤ 15 kWth ist WPSM zwingend.",
+    "url_hinweis": "Die URL enthält keine Versionsnummer, der Inhalt kann sich ändern. Deshalb auf quelle_version prüfen und die Quelle überwachen."
   },
   {
     "id": "SO-M05-GESUCH-VOR-BAUBEGINN",
@@ -64,13 +69,14 @@
     "evidenzstatus": "primär",
     "quelle_titel": "FAQ Wärmepumpen, Energiefachstelle Kanton Solothurn",
     "quelle_herausgeber": "Energiefachstelle Kanton Solothurn",
-    "quelle_url": null,
-    "quelle_version": "FAQ Stand 2026-09-26",
+    "quelle_url": "https://energie.so.ch/foerderung/foerdermassnahmen/waermepumpen/haeufige-fragen-und-antworten/",
+    "quelle_version": "FAQ Stand 2026-09-27",
     "zitat_woertlich": "Das Gesuch muss vollständig vor Baubeginn bei der Energiefachstelle eingetroffen sein. Die Onlineeingabe reicht nicht aus.",
     "geprueft_am": "2026-09-27",
     "geprueft_von": "Jan",
     "entscheidungsrelevanz": "hoch",
-    "notiz": null
+    "notiz": null,
+    "url_hinweis": "Die URL enthält keine Versionsnummer, der Inhalt kann sich ändern. Deshalb auf quelle_version prüfen und die Quelle überwachen."
   },
   {
     "id": "SO-M05-GEAK",
@@ -137,12 +143,13 @@
     ],
     "quelle_titel": "Förderbedingungen Wärmepumpen M-05/IP-05/M-06/IP-06",
     "quelle_herausgeber": "Energiefachstelle Kanton Solothurn",
-    "quelle_url": null,
+    "quelle_url": "https://energie.so.ch/fileadmin/energie/_pdf/Foerderbedingungen_Waermepumpen.pdf",
     "quelle_version": "260101",
     "zitat_woertlich": null,
     "geprueft_am": "2026-09-26",
     "geprueft_von": "Jan",
     "entscheidungsrelevanz": "hoch",
-    "notiz": "Nie als NEIN ausgeben. GEAK Plus wird in SO separat gefördert (SO-21) und hat damit einen anderen Regeltyp: gebaeudeanalyse_foerderung. Ein Berner Satz ('Ohne gültigen GEAK ...') wurde am 2026-09-26 fälschlich SO zugeschrieben. V260101 und FAQ WP am 2026-09-27 inhaltlich gesichtet, ohne GEAK als M-05-Bedingung; eine vollständige Suche ist nicht bestätigt."
+    "notiz": "Nie als NEIN ausgeben. GEAK Plus wird in SO separat gefördert (SO-21) und hat damit einen anderen Regeltyp: gebaeudeanalyse_foerderung. Ein Berner Satz ('Ohne gültigen GEAK ...') wurde am 2026-09-26 fälschlich SO zugeschrieben. V260101 und FAQ WP am 2026-09-27 inhaltlich gesichtet, ohne GEAK als M-05-Bedingung; eine vollständige Suche ist nicht bestätigt.",
+    "url_hinweis": "Die URL enthält keine Versionsnummer, der Inhalt kann sich ändern. Deshalb auf quelle_version prüfen und die Quelle überwachen."
   }
 ]
